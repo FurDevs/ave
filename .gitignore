@@ -59,4 +59,7 @@ cmake-build-debug/
 *.swp
 *.swo
 
-*/line
+*/ave
+
+Makefile
+
