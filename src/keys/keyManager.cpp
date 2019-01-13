@@ -1,6 +1,3 @@
-//
-// Created by Maakinoh on 2019-01-11.
-//
 
 #include <vector>
 #include "keyManager.hpp"
@@ -9,36 +6,57 @@
  *
  * @param listener
  */
-void KeyCodes::KeyManager::add_key(KeyListener *listener, int key_code)
-{
+void KeyCodes::KeyManager::add_key(KeyListener *listener, int key_code) {
     KeyCodes::KeyEvent event;
     event.key_code = key_code;
     event.observer = listener;
-    this->key_event_observer.push_back(&event);
+    this->key_event_observer.push_back(event);
 }
 
 
-void KeyCodes::KeyManager::remove_key(int key_code)
-{
+KeyCodes::KeyManager::KeyManager() {
 
-    int i = 0;
-    for (auto const &value: key_event_observer)
-    {
-        if (value->key_code)
-        {
-            this->key_event_observer.erase(key_event_observer.begin() + i);
+}
+
+/**
+ * This function will remove all key event observer with the passed key_code
+ * @param key_code the key code which should be removed
+ */
+void KeyCodes::KeyManager::remove_key(int key_code) {
+
+    std::vector<KeyEvent>::iterator iter = key_event_observer.begin();
+
+    while (iter != key_event_observer.end()) {
+        if ((*iter).key_code == key_code) {
+            iter = key_event_observer.erase(iter);
         }
-        i++;
+            ++iter;
+
     }
-    delete &i;
 }
 
-void KeyCodes::KeyManager::remove_key(KeyCodes::KeyListener *listener)
-{
+void KeyCodes::KeyManager::remove_key(KeyCodes::KeyListener *listener) {
+    std::vector<KeyEvent>::iterator iter = key_event_observer.begin();
+
+    while (iter != key_event_observer.end()) {
+
+    }
+}
+
+void KeyCodes::KeyManager::remove_key(KeyCodes::KeyListener *listener, int key_code) {
 
 }
 
-void KeyCodes::KeyManager::parse_key_code(int key_code)
-{
+// parse
+void KeyCodes::KeyManager::parse_key_code(int key_code) {
+    std::vector<KeyEvent>::iterator iter = key_event_observer.begin();
+
+    while (iter != key_event_observer.end()) {
+        if ((*iter).key_code == key_code) {
+            (*iter).observer->on_call();
+        }
+        ++iter;
+
+    }
 
 }

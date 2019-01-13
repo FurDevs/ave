@@ -14,14 +14,14 @@ namespace KeyCodes
     class KeyManager
     {
     private:
-        std::vector<KeyEvent*> key_event_observer;
+        std::vector<KeyEvent> key_event_observer;
 
     public:
-
-
+        KeyManager();
         void add_key(KeyListener *listener, int key_code);
         void remove_key(int key_code);
         void remove_key(KeyListener *listener);
+        void remove_key(KeyListener *listener, int key_code);
         void parse_key_code(int key_code);
 
 

@@ -8,7 +8,7 @@
 
 #include "keys/listener/keyListener.hpp"
 
-namespace application
+namespace Application
 {
 
     class KeyTest : public KeyCodes::KeyListener{
@@ -17,10 +17,19 @@ namespace application
     };
 
 
-    class application
+    class Application
     {
     public:
         void start_application();
+        void stop_application();
+        static Application* get_application_context();
+    private:
+        static Application* instance;
+        Application();
+
+        Application& operator=(Application const&);
+
+
 
     };
 };
