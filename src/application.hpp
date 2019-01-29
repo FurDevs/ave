@@ -1,5 +1,4 @@
-#ifndef LINE_APPLICATION_H
-#define LINE_APPLICATION_H
+#pragma once
 
 
 #include "keys/listener/keyListener.hpp"
@@ -35,4 +34,3 @@ namespace Application
 };
 
 
-#endif //LINE_APPLICATION_H

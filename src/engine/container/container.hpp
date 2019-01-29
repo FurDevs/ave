@@ -1,20 +1,19 @@
 #pragma once
 
 #include <vector>
-#include "../window.hpp"
 
-namespace Engine
+namespace Ave::Engine
 {
-
-    class Container : Window
+    class Container
     {
 
     public:
+        Container();
+
         void add_clilden(Container* cild);
 
     private:
         std::vector<Container*> children;
     };
-
 
 };

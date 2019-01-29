@@ -1,17 +1,17 @@
 #pragma once
 
 #include <string>
-#include <stdexcept>
 #include "./container/container.hpp"
 
-namespace Engine
+namespace Ave::Engine
 {
     class Window
     {
+
     private:
         std::string title;
-        Container header;
-        Container footer;
+        Ave::Engine::Container *header;
+        Ave::Engine::Container *footer;
 
 
     public:
@@ -32,6 +32,4 @@ namespace Engine
 
     };
 };
-
-
 
