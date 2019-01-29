@@ -1,7 +1,3 @@
-//
-// Created by Maakinoh on 2019-01-11.
-//
-
 #ifndef LINE_KEYLISTENER_HPP
 #define LINE_KEYLISTENER_HPP
 

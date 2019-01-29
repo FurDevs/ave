@@ -1,7 +1,3 @@
-//
-// Created by Maakinoh on 2019-01-11.
-//
-
 #include <vector>
 #include <map>
 #include "./listener/keyListener.hpp"
@@ -14,10 +10,15 @@ namespace KeyCodes
     class KeyManager
     {
     private:
+        static KeyManager* instance;
         std::vector<KeyEvent> key_event_observer;
+        KeyManager();
+        KeyManager(const KeyManager&);
+        KeyManager &operator=(KeyManager const &);
+
 
     public:
-        KeyManager();
+        static KeyManager* get_intance();
         void add_key(KeyListener *listener, int key_code);
         void remove_key(int key_code);
         void remove_key(KeyListener *listener);
