@@ -1,7 +1,6 @@
-#ifndef LINE_KEYLISTENER_HPP
-#define LINE_KEYLISTENER_HPP
+#pragma once
 
-namespace KeyCodes
+namespace Ave::KeyCodes
 {
     class KeyListener
     {
@@ -18,4 +17,4 @@ namespace KeyCodes
 };
 
 
-#endif //LINE_KEYLISTENER_HPP
+

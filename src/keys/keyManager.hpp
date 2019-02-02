@@ -5,7 +5,7 @@
 #ifndef LINE_KEYMANAGER_HPP
 #define LINE_KEYMANAGER_HPP
 
-namespace KeyCodes
+namespace Ave::KeyCodes
 {
     class KeyManager
     {

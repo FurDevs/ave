@@ -41,7 +41,7 @@ Application::Application::Application()
  */
 void Application::Application::start_application()
 {
-    KeyCodes::KeyManager *m = KeyCodes::KeyManager::get_intance();
+    Ave::KeyCodes::KeyManager *m = Ave::KeyCodes::KeyManager::get_intance();
     KeyTest key = KeyTest();
     m->add_key(&key, 20);
     m->add_key(&key, 22);
