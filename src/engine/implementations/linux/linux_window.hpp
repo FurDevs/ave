@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../window.hpp"
+#include "../../window/window.hpp"
 #include "linux_window.hpp"
 
 #if __unix__ || __APPLE__
